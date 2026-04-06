@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "rewrites": [{ "source": "/proxy/:path*", "destination": "/api/proxy" }],
+    "regions": ["iad1"],
+    "functions": {
+        "api/proxy.js": {
+            "regions": ["iad1"]
+        },
+        "api/command.js": {
+            "regions": ["iad1"]
+        }
+    }
+}
